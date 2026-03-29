@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "antigravity-terminal-mcp"
+version = "0.1.0"
+description = "Windows-focused MCP terminal server with persistent sessions and live log paths"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name = "AATHI" }
+]
+license = { text = "MIT" }
+keywords = ["mcp", "terminal", "stdio", "windows"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft :: Windows"
+]
+
+[project.scripts]
+antigravity-terminal-mcp = "server:main"
+
+[tool.setuptools]
+py-modules = ["server"]
