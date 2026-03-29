@@ -64,6 +64,22 @@ python server.py
   }
 }
 ```
+Or 
+```json
+
+{
+  "mcpServers": {
+    "antigravity-terminal-mcp": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/AATHI/antigravity-terminal-mcp.git",
+        "antigravity-terminal-mcp"
+      ]
+    }
+  }
+}
+```
 
 ---
 
