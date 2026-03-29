@@ -20,10 +20,14 @@ Created by AATHI.
 
 ## Publish-Ready One-Command Usage (From GitHub)
 
-After pushing this project to your GitHub, users can seamlessly install and attach it to Claude using `uvx`:
+After pushing this project to your GitHub, users can seamlessly install and attach it to Claude using `uvx` (or the more robust `python -m uv` variant for Windows):
 
 ```bash
-claude mcp add antigravity-terminal-mcp uvx --from git+https://github.com/AATHI/antigravity-terminal-mcp.git antigravity-terminal-mcp
+# Standard uvx (if in PATH)
+claude mcp add antigravity-terminal-mcp uvx --from git+https://github.com/aathishwar-13/antigravity-terminal-mcp.git antigravity-terminal-mcp
+
+# More robust Windows version (if uvx is not in PATH)
+claude mcp add antigravity-terminal-mcp python -m uv tool run --from git+https://github.com/aathishwar-13/antigravity-terminal-mcp.git antigravity-terminal-mcp
 ```
 
 *(Note: If the code is nested in a subdirectory, simply append `#subdirectory=folder_name` to the git URL).*
@@ -46,13 +50,25 @@ python server.py
 {
   "mcpServers": {
     "antigravity-terminal-mcp": {
-      "command": "uvx",
+      "command": "python",
       "args": [
+        "-m",
+        "uv",
+        "tool",
+        "run",
         "--from",
-        "git+https://github.com/AATHI/antigravity-terminal-mcp.git",
+        "git+https://github.com/aathishwar-13/antigravity-terminal-mcp.git",
         "antigravity-terminal-mcp"
       ]
     }
   }
 }
 ```
+
+---
+
+## 👨‍💻 About the Author
+
+**AATHI** is a developer focused on building high-performance, developer-centric automation tools for the next generation of AI agents. With a specialization in bridging the gap between headless LLM execution and rich user-facing terminal interactions, AATHI created this tool to provide a portable, professional terminal experience beyond the standard VS Code integration limits.
+
+Feel free to reach out for feedback or technical support via this repository!
