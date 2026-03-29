@@ -73,7 +73,7 @@ Or
       "command": "uvx",
       "args": [
         "--from",
-        "git+https://github.com/AATHI/antigravity-terminal-mcp.git",
+         "git+https://github.com/aathishwar-13/antigravity-terminal-mcp.git",
         "antigravity-terminal-mcp"
       ]
     }
