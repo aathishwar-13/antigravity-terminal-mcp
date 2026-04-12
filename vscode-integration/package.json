@@ -1,0 +1,38 @@
+{
+  "name": "antigravity-terminal-vscode",
+  "displayName": "Antigravity Terminal Integration",
+  "description": "Open Antigravity MCP session monitors inside the VS Code integrated terminal.",
+  "version": "0.0.7",
+  "publisher": "aathi-local",
+  "repository": {"type": "git", "url": "https://github.com/dummy/dummy"},
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "antigravityTerminal.openMonitor",
+        "title": "Antigravity: Open Monitor in Integrated Terminal"
+      },
+      {
+        "command": "antigravityTerminal.openMonitorFromJson",
+        "title": "Antigravity: Open Monitor From Session Info JSON"
+      },
+      {
+        "command": "antigravityTerminal.reopenLastMonitor",
+        "title": "Antigravity: Reopen Last Monitor"
+      },
+      {
+        "command": "antigravityTerminal.openExistingSession",
+        "title": "Antigravity: Open Existing Session Monitor"
+      }
+    ]
+  }
+}
